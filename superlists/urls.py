@@ -15,9 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from lists.views import home_page
+from lists import views
+# 본 방식은 https://docs.djangoproject.com/ko/3.0/intro/tutorial03/에서 가져왔다.
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
-    path('', home_page, name='home')
+    path('', views.home_page, name='home')
 ]
